@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import logo from "@/assets/maphupho-logo.jpg";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -23,19 +24,20 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-safari-dark/90 backdrop-blur-md">
-      <div className="container mx-auto flex items-center justify-between px-6 py-4">
-        <Link to="/" className="font-display text-2xl font-bold text-primary">
-          Maphupho Dream Journeys
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b">
+      <div className="container mx-auto flex items-center justify-between px-4 py-3 ">
+        <Link to="/" className="font-display text-2xl font-bold text-primary flex items-center gap-2 ">
+        <img src={logo} alt="Maphupho Tour" className="h-10 w-10 rounded-full object-cover" />
+          Maphupho Tour
         </Link>
 
         {/* Desktop */}
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-4 md:flex">
           {navItems.map((item) => (
             <Link
               key={item.label}
               to={item.href}
-              className="font-body text-sm font-medium tracking-wide text-safari-cream/80 transition-colors hover:text-primary"
+              className="px-3 py-2 rounded-md text-sm font-medium transition-colors text-foreground hover:bg-muted"
             >
               {item.label}
             </Link>
