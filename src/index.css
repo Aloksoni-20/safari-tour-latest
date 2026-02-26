@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 97%;
+    --foreground: 24 10% 15%;
+
+    --card: 40 30% 95%;
+    --card-foreground: 24 10% 15%;
+
+    --popover: 40 33% 97%;
+    --popover-foreground: 24 10% 15%;
+
+    --primary: 30 80% 45%;
+    --primary-foreground: 40 33% 97%;
+
+    --secondary: 140 25% 32%;
+    --secondary-foreground: 40 33% 97%;
+
+    --muted: 35 20% 90%;
+    --muted-foreground: 24 10% 40%;
+
+    --accent: 15 70% 50%;
+    --accent-foreground: 40 33% 97%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 35 20% 85%;
+    --input: 35 20% 85%;
+    --ring: 30 80% 45%;
+
+    --radius: 0.5rem;
+
+    --safari-gold: 42 87% 55%;
+    --safari-amber: 30 80% 45%;
+    --safari-terracotta: 15 70% 50%;
+    --safari-green: 140 25% 32%;
+    --safari-dark: 24 10% 15%;
+    --safari-cream: 40 33% 97%;
+    --safari-sand: 35 30% 88%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Source Sans 3', sans-serif;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    background: linear-gradient(135deg, hsl(42 87% 55%), hsl(30 80% 55%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-safari-overlay {
+    background: linear-gradient(180deg, hsla(24, 10%, 15%, 0.4) 0%, hsla(24, 10%, 15%, 0.7) 100%);
+  }
+
+  .bg-safari-gradient {
+    background: linear-gradient(135deg, hsl(30, 80%, 45%) 0%, hsl(42, 87%, 55%) 100%);
+  }
+}
