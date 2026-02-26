@@ -6,7 +6,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden min-h-[96vh]">
       <img
         src={heroImage}
         alt="African safari sunset with elephants and acacia trees"
@@ -16,12 +16,13 @@ const HeroSection = () => {
 
       <div className="relative z-10 px-6 text-center">
         <h1 className="animate-fade-in-up font-display text-5xl font-bold leading-tight text-safari-cream md:text-7xl">
-          Maphupho<br />
-          <span className="text-gradient-gold">Dream Journeys</span>
+          Discover Africa the <br />
+          <span className="text-gradient-gold"> Authentic Way</span>
         </h1>
         <p className="mx-auto mt-6 max-w-2xl animate-fade-in-up font-body text-lg text-safari-cream/80 [animation-delay:0.2s] md:text-xl">
-          Discover the magic of Southern Africa through unforgettable safari adventures, cultural immersions, and luxury travel experiences.
+         Experience unforgettable safaris, cultural journeys, and tailor-made tours across Southern Africa with trusted local experts.
         </p>
+        <p className="text opacity-60 mb-8 text-white mt-6">Safari • Cultural Tours • Luxury &amp; Budget Packages • Custom Experiences</p>
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <button
             onClick={handleBookNow}
