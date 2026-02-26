@@ -18,6 +18,7 @@ const OurPackages = () => {
         <h2 className="text-center font-display text-4xl font-bold text-foreground md:text-5xl">
           Our Packages
         </h2>
+         <div className="w-20 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
         <p className="mx-auto mt-4 max-w-xl text-center font-body text-muted-foreground">
           Choose your destination and start your dream journey
         </p>
